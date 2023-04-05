@@ -23,7 +23,8 @@ RUN python -m venv /py && \
         django-user
 
 ENV PATH="/py/bin:$PATH"
+ENV SECRET_KEY=''
 
-RUN chown django-user:django-user -R /app
+#RUN chown django-user:django-user -R /app
 
 USER django-user
